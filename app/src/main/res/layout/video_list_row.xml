@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/videoRelativeLayoutAdapter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/row_padding_vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/row_padding_vertical">
+
+    <TextView
+        android:id="@+id/videoTimestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:fontFamily="@font/ign_general"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/videoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/videoTimestamp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/ign_title_font_bold"
+        android:textSize="20dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textColor="@color/title"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardImage"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/videoTitle"
+        app:cardCornerRadius="5dp">
+
+        <ImageView
+            android:id="@+id/videoImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/videoTitle"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/videoPlayIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@drawable/video_play_button"/>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/videoDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardImage"
+        android:layout_marginTop="10dp"
+        android:textSize="13dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:fontFamily="@font/ign_normal_text"
+        android:textColor="@color/colorTabsText"
+        android:lineSpacingMultiplier="1.3"/>
+
+    <ImageView
+        android:id="@+id/videoWatchImgIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoDesc"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="0dp"
+        android:src="@drawable/ic_action_watch_icon"
+        android:tint="@color/colorTabsText"/>
+
+    <TextView
+        android:id="@+id/videoWatchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoDesc"
+        android:text="Watch"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"
+        android:textSize="16dp"
+        android:textColor="@color/headerSwipeText"
+        android:fontFamily="@font/ign_general"
+        android:layout_toEndOf="@+id/videoWatchImgIcon" />
+
+    <ImageView
+        android:id="@+id/videoCommentImgIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoDesc"
+        android:layout_toStartOf="@+id/videoCommentText"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_action_comment"
+        android:tint="@color/colorTabsText"/>
+
+    <TextView
+        android:id="@+id/videoCommentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoDesc"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="15dp"
+        android:textSize="16dp"
+        android:layout_toStartOf="@+id/videoCommentCount"
+        android:textColor="@color/headerSwipeText"
+        android:fontFamily="@font/ign_general"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="Comment" />
+
+    <TextView
+        android:id="@+id/videoCommentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/videoDesc"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="0dp"
+        android:textSize="16dp"
+        android:fontFamily="@font/ign_general"
+        android:textColor="@color/commentCount"
+        android:textStyle="bold"
+        android:textAlignment="textEnd" />
+
+</RelativeLayout>

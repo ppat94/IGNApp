@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/articleRelativeLayoutAdapter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/row_padding_vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/row_padding_vertical">
+
+    <TextView
+        android:id="@+id/articleTimestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:fontFamily="@font/ign_general"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/articleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/articleTimestamp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/ign_title_font_bold"
+        android:textSize="20dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textColor="@color/title"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardImage"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/articleTitle"
+        app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/articleImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/articleTitle"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"/>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/articleDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardImage"
+        android:layout_marginTop="10dp"
+        android:textSize="13dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:fontFamily="@font/ign_normal_text"
+        android:textColor="@color/colorTabsText"
+        android:lineSpacingMultiplier="1.3"/>
+    
+    <ImageView
+        android:id="@+id/articleReadImgIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/articleDesc"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="-3dp"
+        android:src="@drawable/ic_action_read_text"
+        android:tint="@color/colorTabsText"/>
+    
+    <TextView
+        android:id="@+id/articleReadText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/articleDesc"
+        android:text="Read"
+        android:layout_marginTop="15dp"
+        android:textSize="16dp"
+        android:textColor="@color/headerSwipeText"
+        android:fontFamily="@font/ign_general"
+        android:layout_toEndOf="@+id/articleReadImgIcon" />
+
+    <ImageView
+        android:id="@+id/articleCommentImgIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/articleDesc"
+        android:layout_toStartOf="@+id/articleCommentText"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_action_comment"
+        android:tint="@color/colorTabsText"/>
+
+    <TextView
+        android:id="@+id/articleCommentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/articleDesc"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="15dp"
+        android:textSize="16dp"
+        android:layout_toStartOf="@+id/articleCommentCount"
+        android:textColor="@color/headerSwipeText"
+        android:fontFamily="@font/ign_general"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="Comment" />
+
+    <TextView
+        android:id="@+id/articleCommentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/articleDesc"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="0dp"
+        android:textSize="16dp"
+        android:fontFamily="@font/ign_general"
+        android:textColor="@color/commentCount"
+        android:textStyle="bold"
+        android:textAlignment="textEnd" />
+
+</RelativeLayout>

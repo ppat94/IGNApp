@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B02A21</color>
+    <color name="colorPrimaryDark">#B02A21</color> <!--#D51D29 -->
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorTabsText">#999999</color>
+    <color name="year">#999999</color>
+    <color name="title">#000000</color>
+    <color name="commentCount">#6390F0</color>
+    <color name="headerSwipeText">#C0C0C0</color>
+    <color name="headerArrowColor">#696969</color>
+</resources>
